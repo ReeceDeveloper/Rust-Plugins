@@ -17,16 +17,41 @@
  * DEALINGS IN THE SOFTWARE.
  */
 
+using Newtonsoft.Json;
+
 namespace Oxide.Plugins
 {
     [Info("Essentials", "ReeceDeveloper", "1.0.0")]
     [Description("Provides essentials functions to your Rust server.")]
-    
-    public class Essentials : RustPlugin
+
+    public class Essentials : CovalencePlugin
     {
+        private class PluginConfig
+        {
+            [JsonProperty("(1). Enable the Essentials plugin?")]
+            public bool PluginEnabled { get; private set; } = true;
+        }
+        
+        private PluginConfig _config;
+        
+        protected override void LoadDefaultConfig()
+        {
+            Config.WriteObject(new PluginConfig(), true);
+        }
+
+        private new void SaveConfig()
+        {
+            Config.WriteObject(_config, true);
+        }
+
         private void Init()
         {
-            Puts("Essentials has been loaded.");
+            _config = Config.ReadObject<PluginConfig>();
+
+            if (!_config.PluginEnabled)
+            {
+                
+            }
         }
     }
 }
