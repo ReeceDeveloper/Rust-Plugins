@@ -23,7 +23,7 @@ using Oxide.Core.Libraries.Covalence;
 
 namespace Oxide.Plugins
 {
-    [Info("Essentials", "ReeceDeveloper", "1.0.0")]
+    [Info("Essentials", "ReeceDeveloper", "1.0.1")]
     [Description("Provides essentials functions to your Rust server.")]
 
     public class Essentials : CovalencePlugin
@@ -49,9 +49,6 @@ namespace Oxide.Plugins
 
             [JsonProperty("(6). Announce when a player leaves the server?")]
             public bool AnnounceLeaveEvents { get; private set; } = true;
-            
-            [JsonProperty("(x). Enable debug statements in console?")]
-            public bool DebugEnabled { get; private set; }
         }
         
         private PluginConfig _config;
@@ -96,7 +93,7 @@ namespace Oxide.Plugins
 
         private void Unload()
         {
-            Puts(" - Successfully been unloaded.");
+            Puts("- Successfully been unloaded.");
         }
         
         #region Whitelisting
@@ -105,9 +102,6 @@ namespace Oxide.Plugins
 
         private void InitWhitelist()
         {
-            if (_config.DebugEnabled) 
-                Puts("- Whitelisting is currently enabled.");
-
             permission.RegisterPermission(WhitelistPerm, this);
         }
         
@@ -126,9 +120,6 @@ namespace Oxide.Plugins
             if (IsWhitelisted(id))
                 return null;
 
-            if (_config.DebugEnabled)
-                Puts($"- {name} tried to connect but was not whitelisted.");
-
             return lang.GetMessage("WhitelistDenyEvent", this);
         }
 
@@ -140,10 +131,7 @@ namespace Oxide.Plugins
         {
             if (!_config.AnnounceWorldSave)
                 return;
-            
-            if (_config.DebugEnabled)
-                Puts("- Announcing that the world is saving.");
-            
+
             server.Broadcast(lang.GetMessage("WorldSaveEvent", this));
             
         }
@@ -159,9 +147,6 @@ namespace Oxide.Plugins
 
             if (!name.Equals("SERVER") && message.Contains("gave"))
                 return null;
-            
-            if (_config.DebugEnabled)
-                Puts("- Blocked a server F1 give message.");
 
             return true;
         }
@@ -174,9 +159,6 @@ namespace Oxide.Plugins
         {
             if (!_config.AnnounceJoinEvents)
                 return;
-            
-            if(_config.DebugEnabled)
-                Puts($"- {player.Name} has joined the server.");
 
             var message = lang.GetMessage("PlayerJoinEvent", this);
             server.Broadcast(string.Format(message, player.Name));
@@ -186,9 +168,6 @@ namespace Oxide.Plugins
         {
             if (!_config.AnnounceLeaveEvents)
                 return;
-            
-            if(_config.DebugEnabled)
-                Puts($"- {player.Name} has left the server.");
 
             var message = lang.GetMessage("PlayerLeaveEvent", this);
             server.Broadcast(string.Format(message, player.Name));
