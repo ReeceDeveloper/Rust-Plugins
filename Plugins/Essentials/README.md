@@ -1,7 +1,6 @@
 # Essentials
 
 The Essentials plugin provides extra functions to improve quality of life while playing Rust.
-All functions within the plugin (including the messages) are configurable by the end-user.
 
 ## Default (Plugin) Configuration
 
@@ -14,8 +13,7 @@ Below is the default plugin configuration settings should you need to reset your
   "(3). Announce when the server is saved?": false,
   "(4). Disable F1-give messages?": false,
   "(5). Announce when a player joins the server?": true,
-  "(6). Announce when a player leaves the server?": true,
-  "(x). Enable debug statements in console?": false
+  "(6). Announce when a player leaves the server?": true
 }
 ```
 

@@ -90,6 +90,12 @@ namespace Oxide.Plugins
             
             Puts("- Successfully been initialised.");
         }
+        
+        private void OnServerInitialized(bool initial)
+        {
+            if(initial)
+                Init();
+        }
 
         private void Unload()
         {
