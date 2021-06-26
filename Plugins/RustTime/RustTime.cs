@@ -47,7 +47,10 @@ namespace Oxide.Plugins
             public int NightSpeedLength { get; private set; } = 15;
 
             [JsonProperty("(6). Announce when the time becomes faster?")]
-            public bool AnnounceTimeSpeedChange { get; private set; } = true;
+            public bool AnnounceTimeFast { get; private set; } = true;
+
+            [JsonProperty("(7). Announce when the time returns to normal?")]
+            public bool AnnounceTimeNormal { get; private set; } = true;
         }
         
         private PluginConfig _config;
@@ -65,7 +68,8 @@ namespace Oxide.Plugins
         {
             lang.RegisterMessages(new Dictionary<string, string>
             {
-                ["TimeSpeedChangeEvent"] = "Time will now speed up during night."
+                ["TimeSpeedNormalEvent"] = "Time will now resume its normal speed.",
+                ["TimeSpeedFastEvent"] = "Time will now speed up during night."
             }, this);
         }
         
@@ -133,19 +137,26 @@ namespace Oxide.Plugins
             _time.ProgressTime = true;
             _time.UseTimeCurve = false;
             _time.OnSunset += OnSunset;
-            
-            if(!(_sky.Cycle.Hour > _sky.SunriseTime && _sky.Cycle.Hour < _sky.SunsetTime))
+
+            if (_sky.Cycle.Hour > _sky.SunriseTime && _sky.Cycle.Hour < _sky.SunsetTime)
+                OnSunrise();
+            else
                 OnSunset();
+        }
+
+        private void OnSunrise()
+        {
+            if(_config.AnnounceTimeNormal)
+                server.Broadcast(lang.GetMessage("TimeSpeedNormalEvent", this));
         }
         
         private void OnSunset()
         {
             _time.DayLengthInMinutes = 
                 _config.NightSpeedLength * (24.0f / (24.0f - (TOD_Sky.Instance.SunsetTime - TOD_Sky.Instance.SunriseTime)));
-            
-            server.Broadcast(lang.GetMessage("TimeSpeedChangeEvent", this));
-            
-            Puts("Time will now speed up during the night."); 
+
+            if(_config.AnnounceTimeFast)
+                server.Broadcast(lang.GetMessage("TimeSpeedFastEvent", this));
         }
 
         #endregion NightSpeed

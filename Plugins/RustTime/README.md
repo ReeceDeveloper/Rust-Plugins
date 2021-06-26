@@ -14,7 +14,8 @@ Below is the default plugin configuration settings should you need to reset your
   "(3). If enabled, set the static time.": 12,
   "(4). Speed up Rust's night phase?": false,
   "(5). If enabled, set how long night should last (minutes).": 15,
-  "(6). Announce when the time becomes faster?": true
+  "(6). Announce when the time becomes faster?": true,
+  "(7). Announce when the time returns to normal?": true
 }
 ```
 
@@ -24,7 +25,8 @@ Below is the default language configuration settings should you need to reset yo
 
 ```json
 {
-  "TimeSpeedChangeEvent": "Time will now speed up during night."
+  "TimeSpeedNormalEvent": "Time will now resume its normal speed.",
+  "TimeSpeedFastEvent": "Time will now speed up during night."
 }
 ```
 
