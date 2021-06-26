@@ -97,8 +97,11 @@ namespace Oxide.Plugins
                 UnityEngine.Object.FindObjectOfType<TOD_Time>().ProgressTime = true;
 
             if (_config.NightSpeedEnabled && TOD_Sky.Instance.Components.Time != null)
+            {
+                TOD_Sky.Instance.Components.Time.OnSunrise -= OnSunrise;
                 TOD_Sky.Instance.Components.Time.OnSunset -= OnSunset;
-            
+            }
+
             Puts("- Successfully been unloaded.");
         }
 
@@ -123,6 +126,8 @@ namespace Oxide.Plugins
         private readonly TOD_Time _time = TOD_Sky.Instance.Components.Time;
         private readonly TOD_Sky _sky = TOD_Sky.Instance;
         
+        private bool _day;
+        
         private void SetTime()
         {
             if (!_config.NightSpeedEnabled)
@@ -136,6 +141,7 @@ namespace Oxide.Plugins
 
             _time.ProgressTime = true;
             _time.UseTimeCurve = false;
+            _time.OnSunrise += OnSunrise;
             _time.OnSunset += OnSunset;
 
             if (_sky.Cycle.Hour > _sky.SunriseTime && _sky.Cycle.Hour < _sky.SunsetTime)
@@ -146,8 +152,14 @@ namespace Oxide.Plugins
 
         private void OnSunrise()
         {
-            if(_config.AnnounceTimeNormal)
+            _time.DayLengthInMinutes =
+                30 * (24.0f / (TOD_Sky.Instance.SunsetTime - TOD_Sky.Instance.SunriseTime));
+
+            if (_config.AnnounceTimeNormal)
                 server.Broadcast(lang.GetMessage("TimeSpeedNormalEvent", this));
+
+            if (!_day)
+                _day = true;
         }
         
         private void OnSunset()
@@ -155,8 +167,11 @@ namespace Oxide.Plugins
             _time.DayLengthInMinutes = 
                 _config.NightSpeedLength * (24.0f / (24.0f - (TOD_Sky.Instance.SunsetTime - TOD_Sky.Instance.SunriseTime)));
 
-            if(_config.AnnounceTimeFast)
+            if (_config.AnnounceTimeFast)
                 server.Broadcast(lang.GetMessage("TimeSpeedFastEvent", this));
+
+            if (_day)
+                _day = false;
         }
 
         #endregion NightSpeed
