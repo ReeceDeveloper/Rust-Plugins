@@ -40,7 +40,7 @@ came from "end-of-the-day" commits where work will be resumed at a later date.
 
 ## Contact Me!
 
-You can contact me on Discord by adding `Reece#9545` or by joining my [Discord Server](https://discord.com/). 
+You can contact me on Discord by adding `Reece#9545` or by joining my [Discord Server](https://discord.gg/gdAADaV6c8). 
 You can also try messaging me on [Twitter](https://twitter.com/ReeceDeveloper). I also have 
 [Signal](https://signal.org) and will add people by request.
 
