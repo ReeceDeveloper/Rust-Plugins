@@ -36,7 +36,7 @@ came from "end-of-the-day" commits where work will be resumed at a later date.
 * [YouTube Channel](https://www.youtube.com/channel/UC1h5k4wUa9VRpZpH2bqr3kg)
 * [GitHub Account](https://github.com/ReeceDeveloper)
 * [GitLab Account](https://gitlab.com/ReeceDeveloper)
-* [Discord Server](https://discord.com/)
+* [Discord Server](https://discord.gg/gdAADaV6c8)
 
 ## Contact Me!
 
