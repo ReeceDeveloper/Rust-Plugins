@@ -1,0 +1,506 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <RootNamespace>RustPlugins</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Reference Include="0Harmony, Version=1.2.0.1, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\0Harmony.dll</HintPath>
+      </Reference>
+      <Reference Include="Accessibility, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\Accessibility.dll</HintPath>
+      </Reference>
+      <Reference Include="ApexAI, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\ApexAI.dll</HintPath>
+      </Reference>
+      <Reference Include="ApexSerialization, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\ApexSerialization.dll</HintPath>
+      </Reference>
+      <Reference Include="ApexShared, Version=1.1.1.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\ApexShared.dll</HintPath>
+      </Reference>
+      <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\Assembly-CSharp.dll</HintPath>
+      </Reference>
+      <Reference Include="Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\Assembly-CSharp-firstpass.dll</HintPath>
+      </Reference>
+      <Reference Include="com.unity.postprocessing.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\com.unity.postprocessing.Runtime.dll</HintPath>
+      </Reference>
+      <Reference Include="CurvedTextMeshPro, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\CurvedTextMeshPro.dll</HintPath>
+      </Reference>
+      <Reference Include="DelaunayER, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\DelaunayER.dll</HintPath>
+      </Reference>
+      <Reference Include="DryWetMidi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\DryWetMidi.dll</HintPath>
+      </Reference>
+      <Reference Include="EasyAntiCheat.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\EasyAntiCheat.Client.dll</HintPath>
+      </Reference>
+      <Reference Include="EasyAntiCheat.Server, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\EasyAntiCheat.Server.dll</HintPath>
+      </Reference>
+      <Reference Include="EasyRoads3Dv3, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\EasyRoads3Dv3.dll</HintPath>
+      </Reference>
+      <Reference Include="EZhex1991.EZSoftBone, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\EZhex1991.EZSoftBone.dll</HintPath>
+      </Reference>
+      <Reference Include="Facepunch.Console, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\Facepunch.Console.dll</HintPath>
+      </Reference>
+      <Reference Include="Facepunch.GoogleSheets, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\Facepunch.GoogleSheets.dll</HintPath>
+      </Reference>
+      <Reference Include="Facepunch.Input, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\Facepunch.Input.dll</HintPath>
+      </Reference>
+      <Reference Include="Facepunch.Network, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\Facepunch.Network.dll</HintPath>
+      </Reference>
+      <Reference Include="Facepunch.Raknet, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\Facepunch.Raknet.dll</HintPath>
+      </Reference>
+      <Reference Include="Facepunch.Rcon, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\Facepunch.Rcon.dll</HintPath>
+      </Reference>
+      <Reference Include="Facepunch.Skeleton, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\Facepunch.Skeleton.dll</HintPath>
+      </Reference>
+      <Reference Include="Facepunch.Sqlite, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\Facepunch.Sqlite.dll</HintPath>
+      </Reference>
+      <Reference Include="Facepunch.SteamNetworking, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\Facepunch.SteamNetworking.dll</HintPath>
+      </Reference>
+      <Reference Include="Facepunch.Steamworks.Posix, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\Facepunch.Steamworks.Posix.dll</HintPath>
+      </Reference>
+      <Reference Include="Facepunch.System, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\Facepunch.System.dll</HintPath>
+      </Reference>
+      <Reference Include="Facepunch.Unity, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\Facepunch.Unity.dll</HintPath>
+      </Reference>
+      <Reference Include="Facepunch.UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\Facepunch.UnityEngine.dll</HintPath>
+      </Reference>
+      <Reference Include="Fleck, Version=0.0.0.1, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\Fleck.dll</HintPath>
+      </Reference>
+      <Reference Include="GA, Version=1.1.7168.19305, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\GA.dll</HintPath>
+      </Reference>
+      <Reference Include="I18N, Version=2.0.5.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\I18N.dll</HintPath>
+      </Reference>
+      <Reference Include="I18N.CJK, Version=2.0.5.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\I18N.CJK.dll</HintPath>
+      </Reference>
+      <Reference Include="I18N.MidEast, Version=2.0.5.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\I18N.MidEast.dll</HintPath>
+      </Reference>
+      <Reference Include="I18N.Other, Version=2.0.5.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\I18N.Other.dll</HintPath>
+      </Reference>
+      <Reference Include="I18N.Rare, Version=2.0.5.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\I18N.Rare.dll</HintPath>
+      </Reference>
+      <Reference Include="I18N.West, Version=2.0.5.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\I18N.West.dll</HintPath>
+      </Reference>
+      <Reference Include="Ionic.Zip.Reduced, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\Ionic.Zip.Reduced.dll</HintPath>
+      </Reference>
+      <Reference Include="LZ4, Version=1.0.10.93, Culture=neutral, PublicKeyToken=62e1b5ec1eec9bdd">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\LZ4.dll</HintPath>
+      </Reference>
+      <Reference Include="LZ4pn, Version=1.0.10.93, Culture=neutral, PublicKeyToken=62e1b5ec1eec9bdd">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\LZ4pn.dll</HintPath>
+      </Reference>
+      <Reference Include="MidiJack, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\MidiJack.dll</HintPath>
+      </Reference>
+      <Reference Include="Mono.Data.Sqlite, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\Mono.Data.Sqlite.dll</HintPath>
+      </Reference>
+      <Reference Include="Mono.Data.Tds, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\Mono.Data.Tds.dll</HintPath>
+      </Reference>
+      <Reference Include="Mono.Posix, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\Mono.Posix.dll</HintPath>
+      </Reference>
+      <Reference Include="Mono.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\Mono.Security.dll</HintPath>
+      </Reference>
+      <Reference Include="Mono.WebBrowser, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\Mono.WebBrowser.dll</HintPath>
+      </Reference>
+      <Reference Include="Mp3Sharp, Version=1.4.7417.21510, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\MP3Sharp.dll</HintPath>
+      </Reference>
+      <Reference Include="MySql.Data, Version=6.9.5.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\MySql.Data.dll</HintPath>
+      </Reference>
+      <Reference Include="netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\netstandard.dll</HintPath>
+      </Reference>
+      <Reference Include="NewAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\NewAssembly.dll</HintPath>
+      </Reference>
+      <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\Newtonsoft.Json.dll</HintPath>
+      </Reference>
+      <Reference Include="Novell.Directory.Ldap, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\Novell.Directory.Ldap.dll</HintPath>
+      </Reference>
+      <Reference Include="Oxide.Core, Version=2.0.3988.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\Oxide.Core.dll</HintPath>
+      </Reference>
+      <Reference Include="Oxide.CSharp, Version=2.0.4037.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\Oxide.CSharp.dll</HintPath>
+      </Reference>
+      <Reference Include="Oxide.MySql, Version=2.0.3758.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\Oxide.MySql.dll</HintPath>
+      </Reference>
+      <Reference Include="Oxide.Rust, Version=2.0.4762.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\Oxide.Rust.dll</HintPath>
+      </Reference>
+      <Reference Include="Oxide.SQLite, Version=2.0.3760.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\Oxide.SQLite.dll</HintPath>
+      </Reference>
+      <Reference Include="Oxide.Unity, Version=2.0.3772.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\Oxide.Unity.dll</HintPath>
+      </Reference>
+      <Reference Include="Rust.Data, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\Rust.Data.dll</HintPath>
+      </Reference>
+      <Reference Include="Rust.Demo, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\Rust.Demo.dll</HintPath>
+      </Reference>
+      <Reference Include="Rust.Global, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\Rust.Global.dll</HintPath>
+      </Reference>
+      <Reference Include="Rust.Harmony, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\Rust.Harmony.dll</HintPath>
+      </Reference>
+      <Reference Include="Rust.Localization, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\Rust.Localization.dll</HintPath>
+      </Reference>
+      <Reference Include="Rust.Platform, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\Rust.Platform.dll</HintPath>
+      </Reference>
+      <Reference Include="Rust.Platform.Common, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\Rust.Platform.Common.dll</HintPath>
+      </Reference>
+      <Reference Include="Rust.Platform.Steam, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\Rust.Platform.Steam.dll</HintPath>
+      </Reference>
+      <Reference Include="Rust.UI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\Rust.UI.dll</HintPath>
+      </Reference>
+      <Reference Include="Rust.Workshop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\Rust.Workshop.dll</HintPath>
+      </Reference>
+      <Reference Include="Rust.World, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\Rust.World.dll</HintPath>
+      </Reference>
+      <Reference Include="System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\System.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\System.Buffers.dll</HintPath>
+      </Reference>
+      <Reference Include="System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\System.ComponentModel.Composition.dll</HintPath>
+      </Reference>
+      <Reference Include="System.ComponentModel.DataAnnotations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\System.ComponentModel.DataAnnotations.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\System.Configuration.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Configuration.Install, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\System.Configuration.Install.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\System.Data.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Data.SQLite, Version=1.0.97.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\System.Data.SQLite.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\System.Design.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Diagnostics.StackTrace, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\System.Diagnostics.StackTrace.dll</HintPath>
+      </Reference>
+      <Reference Include="System.DirectoryServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\System.DirectoryServices.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\System.Drawing.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Drawing.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\System.Drawing.Design.dll</HintPath>
+      </Reference>
+      <Reference Include="System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\System.EnterpriseServices.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Globalization.Extensions, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\System.Globalization.Extensions.dll</HintPath>
+      </Reference>
+      <Reference Include="System.IO.Compression, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\System.IO.Compression.dll</HintPath>
+      </Reference>
+      <Reference Include="System.IO.Compression.FileSystem, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\System.IO.Compression.FileSystem.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\System.Memory.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\System.Net.Http.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Numerics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\System.Numerics.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\System.Numerics.Vectors.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Runtime, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\System.Runtime.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\System.Runtime.Serialization.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Runtime.Serialization.Formatters.Soap, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\System.Runtime.Serialization.Formatters.Soap.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Runtime.Serialization.Xml, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\System.Runtime.Serialization.Xml.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\System.Security.dll</HintPath>
+      </Reference>
+      <Reference Include="System.ServiceModel.Internals, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\System.ServiceModel.Internals.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\System.Transactions.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\System.Web.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Web.ApplicationServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\System.Web.ApplicationServices.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\System.Web.Services.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\System.Windows.Forms.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\System.Xml.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\System.Xml.Linq.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Xml.XPath.XDocument, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\System.Xml.XPath.XDocument.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\Unity.TextMeshPro.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.AccessibilityModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.AccessibilityModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.AIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.AIModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.AndroidJNIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.AndroidJNIModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.AnimationModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.AssetBundleModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.AssetBundleModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.AudioModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.ClothModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.ClothModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.ClusterInputModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.ClusterInputModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.ClusterRendererModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.ClusterRendererModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.CoreModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.CrashReportingModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.CrashReportingModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.DirectorModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.DirectorModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.DSPGraphModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.DSPGraphModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.GameCenterModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.GameCenterModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.GridModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.GridModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.HotReloadModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.HotReloadModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.ImageConversionModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.ImageConversionModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.IMGUIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.IMGUIModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.InputLegacyModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.InputLegacyModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.InputModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.InputModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.JSONSerializeModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.JSONSerializeModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.LocalizationModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.LocalizationModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.ParticleSystemModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.ParticleSystemModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.PerformanceReportingModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.PerformanceReportingModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.Physics2DModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.Physics2DModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.PhysicsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.PhysicsModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.ProfilerModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.ProfilerModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.ScreenCaptureModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.ScreenCaptureModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.SharedInternalsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.SharedInternalsModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.SpriteMaskModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.SpriteMaskModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.SpriteShapeModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.SpriteShapeModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.StreamingModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.StreamingModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.SubstanceModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.SubstanceModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.SubsystemsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.SubsystemsModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.TerrainModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.TerrainModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.TerrainPhysicsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.TextCoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.TextCoreModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.TextRenderingModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.TextRenderingModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.TilemapModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.TilemapModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.TLSModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.TLSModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.UI.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UIElementsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.UIElementsModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.UIModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UmbraModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.UmbraModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UNETModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.UNETModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityAnalyticsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityConnectModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.UnityConnectModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityTestProtocolModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityWebRequestAudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityWebRequestModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.UnityWebRequestModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityWebRequestTextureModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityWebRequestWWWModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.VehiclesModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.VehiclesModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.VFXModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.VFXModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.VideoModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.VideoModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.VRModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.VRModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.WindModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.WindModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.XRModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Non-Version Controlled\Rust Development\DEPENDENCIES\UnityEngine.XRModule.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+</Project>

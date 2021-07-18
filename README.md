@@ -1,48 +1,9 @@
-# Rust Plugins
+# Rust Plugins - Archived
 
-This repository contains plugins developed for the popular survival game Rust. To use these plugins you will
-need uMod (OxideMod) installed on your Rust server. Note: doing such will not allow your Rust server to appear
-in the Community or Official tab of Rust servers; your Rust server will be listed under "modded," even if you
-have no plugins actually installed or active.
-
-## Support
-
-Support for the code (i.e., modifying these plugins) is not provided by me (the developer). However, support
-requests in relation to the installation, configuration, and usage of these plugins can be found in the Discord
-linked below in the `README.md`.
-
-## Contributions
-
-If you find bugs (in production!) please feel free to open an issue; if you have the initiative to fix the bug
-yourself you may do such and open a pull request. If you have suggestions for plugins that can be developed you
-may post those suggestions by joining the Discord linked below in the `README.md`. Lastly, if you find bad code
-(in production!) I apologise, please correct me (hopefully in a constructive wy).
-
-## Development Branch
-
-By downloading plugins from the development branch you acknowledge and accept all risks of bugs associated with
-those plugins. Whilst all things pushed to development should be functional, they may have unfixed bugs that
-came from "end-of-the-day" commits where work will be resumed at a later date.
-
-
-## Dependencies
-
-* [Knowledge of uMod](https://umod.org/documentation/api/overview)
-* [Knowledge of C#](https://duckduckgo.com/?q=Learn+C%23&t=ffab&ia=web)
-* [uMod](https://umod.org/)
-
-## Links & Information
-
-* [YouTube Channel](https://www.youtube.com/channel/UC1h5k4wUa9VRpZpH2bqr3kg)
-* [GitHub Account](https://github.com/ReeceDeveloper)
-* [GitLab Account](https://gitlab.com/ReeceDeveloper)
-* [Discord Server](https://discord.gg/gdAADaV6c8)
-
-## Contact Me!
-
-You can contact me on Discord by adding `Reece#9545` or by joining my [Discord Server](https://discord.gg/gdAADaV6c8). 
-You can also try messaging me on [Twitter](https://twitter.com/ReeceDeveloper). I also have 
-[Signal](https://signal.org) and will add people by request.
+This repository is now archived in favor of the [Essentials](https://github.com/ReeceDeveloper/Essentials) repository.
+To allow for better integration and better expansion of the codebase I have decided to rewrite & rebrand the plugins
+within this repository. All plugins in this repository are now in their final state and the development branch has
+been deleted.
 
 ## MIT License
 

@@ -32,26 +32,6 @@ Below is the default language configuration settings should you need to reset yo
 
 To use colour codes use `[#HEXCODE]Text[/#]` to do such; for example, `[#123ABC]Text[/#]`.
 
-## Dependencies
-
-* [Knowledge of uMod](https://umod.org/documentation/api/overview)
-* [Knowledge of C#](https://duckduckgo.com/?q=Learn+C%23&t=ffab&ia=web)
-* [uMod](https://umod.org/)
-
-## Links & Information
-
-* [YouTube Channel](https://www.youtube.com/channel/UC1h5k4wUa9VRpZpH2bqr3kg)
-* [GitHub Account](https://github.com/ReeceDeveloper)
-* [GitLab Account](https://gitlab.com/ReeceDeveloper)
-* [Discord Server](https://discord.gg/gdAADaV6c8)
-
-## Contact Me!
-
-You can contact me on Discord by adding `Reece#9545` or by joining my [Discord Server](https://discord.gg/gdAADaV6c8).
-You can also try messaging me on [Twitter](https://twitter.com/ReeceDeveloper). I also have
-[Signal](https://signal.org) and will add people by request.
-
-
 ## MIT License
 
 Copyright © 2021 ReeceDeveloper
